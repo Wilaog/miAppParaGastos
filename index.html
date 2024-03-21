@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi economia</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+
+<body>
+
+    <h1>Mi aplicacion de gastos</h1>
+    <div class="row">
+        <div class="col l5 offset-l1 s12">
+            <div class="tableFormat">
+                <table id="transactionTable">
+                    <caption>Historial de transacciones</caption>
+                    <tr>
+                        <th>
+                            Tipo
+                        </th>
+                        <th>
+                            Descripcion
+                        </th>
+                        <th>
+                            Monto
+                        </th>
+                        <th>
+                            Categoria
+                        </th>
+                        <th>
+                            Eliminar
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col l5 s12">
+            <div class="col s8 offset-s2">
+                <form id="transactionForm">
+                    <div class="formField">
+                        <span>Transaccion</span>
+                        <label>
+                            <i class="material-icons">add</i>
+                            <input value="Ingreso" class="with-gap" name="transactionType" type="radio" checked />
+                            <span>Ingreso</span>
+                        </label>
+                        <label>
+                            <i class="material-icons">indeterminate_check_box</i>
+                            <input value="Egreso" class="with-gap" name="transactionType" type="radio" checked />
+                            <span>Egreso</span>
+                        </label>
+                        </p>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="transactionDescription">Decripcion</label>
+                        <input class="validate" type="text" id="transactionDescription" name="transactionDescription"
+                            required>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="transactionAmount">Monto</label>
+                        <input class="validate" id="transactionAmount" type="number" name="transactionAmount" required
+                            min="1" required>
+                    </div>
+
+                    <div class="formField">
+                        <label for="transactionCategory">Categoria</label>
+                        <select class="browser-default" id="transactionCategory" name="transactionCategory" required>
+                        </select>
+                    </div>
+
+                    <div class="formField">
+                        <button class="btn waves-effect waves-light" type="submit" id="botonDeEnvio">Añadir
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="resources/js/main.js"></script>
+
+</body>
+</html>
